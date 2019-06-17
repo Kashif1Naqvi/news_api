@@ -1,3 +1,8 @@
+HELLO
+check the project online from this link https://naqvinews.netlify.com/
+type email 'eve.holt@reqres.in' and password 'cityslicka' for displaying Dashboard
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
