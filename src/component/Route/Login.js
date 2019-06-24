@@ -21,17 +21,17 @@ class Login extends Component {
       password:this.state.password
     }
     let res  = await fetch('https://reqres.in/api/login',{
-                method:'POST',
-                headers:{
-                  'Accept':'application/json',
-                  'Content-Type':'application/json'
-                },
-                body:JSON.stringify(formData)
+      method:'POST',
+      headers:{
+      'Accept':'application/json',
+      'Content-Type':'application/json'
+      },
+      body:JSON.stringify(formData)
     })
     let data =await res.json()
       if(res.status === 200){
         localStorage.setItem('token',JSON.stringify(data.token))
-        this.props.history.push('/dashboard')
+        this.props.history.push('/dashboard/')
       }else{
         this.setState({
           error : data.error
@@ -39,7 +39,6 @@ class Login extends Component {
       }
     }
   render() {
-    console.log(this.state.error)
     return (
       <div className="container bg-lighter" style={{height:"800px",width:"1000px",margin:"40px"}}  >
         <div style={{marginTop:"10%",padding:"10%"}} >

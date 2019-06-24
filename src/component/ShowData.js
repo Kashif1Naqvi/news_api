@@ -12,14 +12,11 @@ class ShowData extends Component {
       show : !prev.show
     }))
   }
-  click = () =>{
-    this.props.history.push('/dashboard')
-  }
   render() {
     const {urlToImage,title,description,author,publishedAt,content,source,url} = this.props.article
     return (
       <div>
-        <button onClick={this.click} className="btn btn-danger float-right ">Back</button>
+        <a href="/dashboard" className="btn btn-danger float-right ">Back</a>
         <figure className="figure">
 				  <img  src={urlToImage} data-toggle="modal" data-target="#exampleModalLong"   width="70%" height="60%" className="img-fluid  rounded"  alt="picther not found"/>
 				</figure>
