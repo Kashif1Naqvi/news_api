@@ -12,11 +12,12 @@ class ShowData extends Component {
       show : !prev.show
     }))
   }
+
   render() {
     const {urlToImage,title,description,author,publishedAt,content,source,url} = this.props.article
     return (
       <div>
-        <a href="/dashboard" className="btn btn-danger float-right ">Back</a>
+        <a href="/dashboard"  className="btn btn-danger float-right ">Back</a>
         <figure className="figure">
 				  <img  src={urlToImage} data-toggle="modal" data-target="#exampleModalLong"   width="70%" height="60%" className="img-fluid  rounded"  alt="picther not found"/>
 				</figure>
